@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "Z47N7AM8S9.com.eMedicoz.app",
+        "paths": [ "/join_custom_module/*" ]
+      }
+    ]
+  }
+}

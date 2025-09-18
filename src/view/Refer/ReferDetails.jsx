@@ -1,0 +1,7 @@
+const ReferDetails = () => {
+  return (
+    <div>ReferDetails</div>
+  )
+}
+
+export default ReferDetails
