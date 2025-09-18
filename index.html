@@ -1,70 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neet PG Preparation, Neet PG Coaching, FMGE, USMLE</title>
-  <link rel="icon" type="image/png" href="https://emed-student-qa.damsdelhi.com/logo.png" />
-  <meta name="google-site-verification" content="0zNrskSEJrGpyFewZ52Jq2bS6lS4YL1D1s6krdireYM"/>
-  <!-- Google Analytics & Ads -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WKFRTXH31"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-3WKFRTXH31');
-    gtag('config', 'AW-1049334284');
-  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Modern Web Page — Sample</title>
+  <meta name="description" content="A clean, responsive single-file HTML template with hero, features, gallery and contact form." />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#06b6d4;--glass: rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,var(--bg),#071124);-webkit-font-smoothing:antialiased}
+    .container{max-width:1100px;margin:0 auto;padding:32px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;color:#012; font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a.cta{background:var(--accent);padding:8px 12px;border-radius:8px;color:#012;margin-left:24px}
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "WebSite",
-    "name": "damsdelhi",
-    "url": "https://www.damsdelhi.com/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://www.damsdelhi.com/search?q={search_term}"
-      },
-      "query-input": "required name=search_term"
-    }
-  }
-  </script>
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:28px}
+    .hero h1{font-size:38px;margin:0 0 14px;color:white;line-height:1.05}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .buttons{display:flex;gap:12px}
+    .btn{padding:10px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:var(--glass);color:#e6eef6;text-decoration:none;font-weight:600}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#7c3aed);color:#021;box-shadow:0 6px 18px rgba(7,12,20,0.6)}
 
-  <!-- Font Awesome with SRI -->
-  <link rel="stylesheet" 
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        crossorigin="anonymous" />
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .stats{display:flex;gap:12px;margin-top:14px}
+    .stat{flex:1;text-align:center}
+    .stat .num{font-weight:700;font-size:20px;color:white}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:32px 0}
+    .feature{padding:18px;border-radius:10px;background:var(--card);border:1px solid rgba(255,255,255,0.02)}
+    .feature h3{margin:0 0 8px}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+    .gallery img{width:100%;height:140px;object-fit:cover;border-radius:8px}
 
+    form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#e6eef6}
+    input::placeholder,textarea::placeholder{color:var(--muted)}
+    .row{display:flex;gap:10px}
+    .row .col{flex:1}
+    footer{padding:32px 0;color:var(--muted);text-align:center}
+
+    /* responsive */
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.gallery{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:repeat(2,1fr)}nav a{display:none}}
+    @media (max-width:520px){.gallery{grid-template-columns:1fr}.features{grid-template-columns:1fr}}
+  </style>
 </head>
-
 <body>
-  <div id="root"></div>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">MW</div>
+        <div>
+          <div style="font-weight:700;color:white">Modern Web</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">Simple. Fast. Responsive.</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="#" class="cta">Get Started</a>
+      </nav>
+    </header>
 
-  <!-- Vite React entry file -->
-  <script type="module" src="/src/main.jsx"></script>
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Beautiful single-file HTML template — ready to customize</h1>
+          <p>Ships with a hero, feature grid, gallery, and a contact form. Lightweight, responsive, and easy to edit for your project.</p>
+          <div class="buttons">
+            <a class="btn primary" href="#contact">Contact Us</a>
+            <a class="btn" href="#features">Explore Features</a>
+          </div>
 
-  <!-- Razorpay checkout with SRI -->
-  <script src="https://checkout.razorpay.com/v1/checkout.js" crossorigin="anonymous" async></script>
+          <div class="stats">
+            <div class="stat card">
+              <div class="num">99.9%</div>
+              <div style="color:var(--muted);font-size:13px">Uptime</div>
+            </div>
+            <div class="stat card">
+              <div class="num">1.2s</div>
+              <div style="color:var(--muted);font-size:13px">Load Time</div>
+            </div>
+            <div class="stat card">
+              <div class="num">24/7</div>
+              <div style="color:var(--muted);font-size:13px">Support</div>
+            </div>
+          </div>
+        </div>
 
-  <!-- Conversion tracking -->
+        <aside class="card">
+          <h3 style="margin-top:0">Quick preview</h3>
+          <p style="color:var(--muted);margin-top:6px">This panel can show a sign-up, pricing, or quick product summary. It's intentionally compact for use in hero areas.</p>
+          <div style="margin-top:12px">
+            <strong>Plan</strong>
+            <div style="font-size:22px;font-weight:700;margin-top:6px">Free • Forever</div>
+            <div style="color:var(--muted);margin-top:8px">No credit card required • Try features at no cost</div>
+            <div style="margin-top:12px"><a class="btn primary" href="#">Start free</a></div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="features">
+        <h2 style="color:white;margin-top:34px">Features</h2>
+        <div class="features">
+          <div class="feature">
+            <h3>Responsive</h3>
+            <p style="color:var(--muted);margin:0">Looks great on phones, tablets and desktops with no extra config.</p>
+          </div>
+          <div class="feature">
+            <h3>Lightweight</h3>
+            <p style="color:var(--muted);margin:0">Minimal CSS and no external libraries keeps load times low.</p>
+          </div>
+          <div class="feature">
+            <h3>Easy to customize</h3>
+            <p style="color:var(--muted);margin:0">All styles live in the same file for quick changes.</p>
+          </div>
+          <div class="feature">
+            <h3>Accessible</h3>
+            <p style="color:var(--muted);margin:0">Semantic HTML and keyboard-friendly controls.</p>
+          </div>
+          <div class="feature">
+            <h3>Reusable blocks</h3>
+            <p style="color:var(--muted);margin:0">Copy/paste sections to reuse in your projects.</p>
+          </div>
+          <div class="feature">
+            <h3>Built-in form</h3>
+            <p style="color:var(--muted);margin:0">Contact form with simple client-side validation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery">
+        <h2 style="color:white;margin-top:14px">Gallery</h2>
+        <div class="gallery">
+          <img src="https://picsum.photos/seed/a/800/600" alt="sample 1">
+          <img src="https://picsum.photos/seed/b/800/600" alt="sample 2">
+          <img src="https://picsum.photos/seed/c/800/600" alt="sample 3">
+          <img src="https://picsum.photos/seed/d/800/600" alt="sample 4">
+          <img src="https://picsum.photos/seed/e/800/600" alt="sample 5">
+          <img src="https://picsum.photos/seed/f/800/600" alt="sample 6">
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:28px">
+        <h2 style="color:white">Contact Us</h2>
+        <div class="card" style="margin-top:10px;padding:18px">
+          <form id="contactForm" onsubmit="return handleSubmit(event)">
+            <div class="row">
+              <div class="col">
+                <input id="name" placeholder="Your name" required />
+              </div>
+              <div class="col">
+                <input id="email" type="email" placeholder="Email address" required />
+              </div>
+            </div>
+            <textarea id="message" rows="5" placeholder="How can we help?" required></textarea>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div style="color:var(--muted);font-size:13px">We reply within 24 hours.</div>
+              <button class="btn primary" type="submit">Send Message</button>
+            </div>
+            <div id="formMsg" style="margin-top:10px;color:var(--muted);font-size:14px"></div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="opacity:0.9">© <span id="year"></span> Modern Web • Built with a single HTML file</div>
+    </footer>
+  </div>
+
   <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof url !== 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-        'send_to': 'AW-1049334284/Ks2DCO2WnMUZEIykrvQD',
-        'event_callback': callback
-      });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const msg = document.getElementById('formMsg');
+      if(!name||!email||!message){ msg.textContent = 'Please complete all fields.'; return false }
+      msg.textContent = 'Sending...';
+
+      // Simulate sending — replace with fetch() to your backend
+      setTimeout(()=>{
+        msg.textContent = `Thanks, ${name}! We'll reply to ${email} soon.`;
+        e.target.reset();
+      },800);
       return false;
     }
   </script>
 </body>
-
 </html>
